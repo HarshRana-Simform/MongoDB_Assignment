@@ -97,6 +97,7 @@ db.employed.find({ name: "Person62",
 ```
 
 Here we can see that totalDocsExamined is 1 after indexing
+
 ![alt text](stats_after.png)
 
 ### Task-4: Find duplicates using aggregation in MongoDB
