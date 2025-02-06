@@ -2,17 +2,20 @@
 
 ### Creating Database and Collection
 
-`// The current database to use,if not exists creates new one 
-use("citizens");`
+```
+//The current database to use,if not exists creates new one
+use("citizens");
 
-`// Create a new collection.
-db.createCollection("employed");`
+//Create a new collection.
+db.createCollection("employed");
+```
 
 ![alt text](create_db_collection.png)
 
 ### Task-1: Batch Create with minimum 100 records in MongoDB
 
-`// Generating dummy records/documents to insert in the collection
+```
+// Generating dummy records/documents to insert in the collection
 var data = [];
 var cities = [
 "Nadiad",
@@ -50,23 +53,28 @@ name: `Person${i + 1}`,
 }
 
 //Query to insert records in a single batch
-db.employed.insertMany(data);`
+db.employed.insertMany(data);
+```
 
 ![alt text](insert_many.png)
 
-`//Fetching the data
-db.employed.find();`
+```
+//Fetching the data
+db.employed.find();
+```
 
 ![alt text](find.png)
 
 ### Task-2: Batch Update with minimum 100 records in MongoDB
 
-`//Increasing the age by 1 year to all records in the collection
+```
+//Increasing the age by 1 year to all records in the collection
 db.employed.updateMany(
-    {}, 
-    { 
-        $inc: { age: 1 } 
-    });`
+    {},
+    {
+        $inc: { age: 1 }
+    });
+```
 
 ![alt text](update_many.png)
 
