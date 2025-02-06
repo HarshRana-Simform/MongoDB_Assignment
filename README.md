@@ -10,7 +10,7 @@ use("citizens");
 db.createCollection("employed");
 ```
 
-![alt text](create_db_collection.png)
+![alt text](/outputs/create_db_collection.png)
 
 ### Task-1: Batch Create with minimum 100 records in MongoDB
 
@@ -56,14 +56,14 @@ name: `Person${i + 1}`,
 db.employed.insertMany(data);
 ```
 
-![alt text](insert_many.png)
+![alt text](/outputs/insert_many.png)
 
 ```
 //Fetching the data
 db.employed.find();
 ```
 
-![alt text](find.png)
+![alt text](/outputs/find.png)
 
 ### Task-2: Batch Update with minimum 100 records in MongoDB
 
@@ -76,7 +76,7 @@ db.employed.updateMany(
     });
 ```
 
-![alt text](update_many.png)
+![alt text](/outputs/update_many.png)
 
 ### Task-3: Perform indexing on particular 3 fields in MongoDB.
 
@@ -86,7 +86,7 @@ db.employed.createIndex({ name: 1, city: 1, work_loc: 1 });
 
 ```
 
-![alt text](index_created.png)
+![alt text](/outputs/index_created.png)
 
 ```
 // Searching after creating a compound index on 'name', 'city' and 'work_loc' with explain method
@@ -98,7 +98,7 @@ db.employed.find({ name: "Person62",
 
 Here we can see that totalDocsExamined is 1 after indexing
 
-![alt text](stats_after.png)
+![alt text](/outputs/stats_after.png)
 
 ### Task-4: Find duplicates using aggregation in MongoDB
 
@@ -147,4 +147,4 @@ db.employed.aggregate([
 ]);
 ```
 
-![alt text](aggregation.png)
+![alt text](/outputs/aggregation.png)
